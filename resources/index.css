@@ -162,3 +162,25 @@ footer {
     width: 930px;
     margin: 0 auto;
 }
+
+@media only screen and (min-width: 470px) and (max-width: 1024px), (orientation: portrait) {
+    
+    body {
+        background-color: red;
+    }
+    
+    .upper-main-content-container {
+        flex-wrap: wrap;
+    }
+    
+    .upper-main-content-flexbox {
+        width: 47%;
+        overflow: hidden;
+        
+    }
+    
+    .information-main-content-flexbox {
+        width: 45%;
+    }
+    
+}
