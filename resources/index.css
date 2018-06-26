@@ -34,6 +34,7 @@ header {
     height: 25rem;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 .hero-image-container {
@@ -60,4 +61,104 @@ header {
     font-weight: bold;
     text-transform: uppercase;
     font-size: 2rem;
+}
+
+.menu-flex-container {
+    background-color: firebrick;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.menu-flex-container ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: wrap row;
+    width: 960px;
+    margin: 0.75rem 0;
+}
+
+.main-content-container {
+    width: 960px;
+    margin: 0 auto;
+    
+}
+
+.upper-main-content-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 0;
+}
+
+.upper-main-content-flexbox {
+    width: 30%;
+    border: 4px solid black;
+    display: flex;
+    flex-flow: column;
+    
+}
+
+.upper-main-content-flexbox img {
+    width: 9rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    align-self: center;    
+}
+
+.upper-main-content-flexbox:nth-of-type(3) {
+    align-self: stretch;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+#glasses {
+    align-self: center;
+    
+}
+
+.upper-main-content-flexbox h3 {
+    text-align: center;
+    background-color: black;
+    padding: 0.5rem 0;
+}
+
+.lower-main-content-container {
+    display: flex;
+    flex-flow: wrap row;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 4rem;
+}
+
+.information-main-content-flexbox {
+    width: 35%;
+}
+
+.information-flexbox-header {
+    background-color: black;
+    padding: 1rem 0 1rem 2rem;
+}
+
+.information-flexbox-lower {
+    color: black;
+    padding-top: 0.5rem;
+}
+
+footer {
+    background-color: black;
+    height: 5rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.copyright {
+    text-align: left;
+    width: 930px;
+    margin: 0 auto;
 }
