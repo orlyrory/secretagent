@@ -1,0 +1,14 @@
+html {
+    font-size: 18px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.sticky-header-container {
+    width: 100%; 
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+
+}
