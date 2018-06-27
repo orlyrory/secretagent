@@ -11,14 +11,22 @@ html {
     font-size: 1rem;
 }
 
-.sticky-header-container nav {
+.sticky-header-container nav,
+.main-content-container,
+.menu-flex-container ul,
+.upper-main-content-container,
+.hero-image-container
+
+{
     width: 960px;
     margin: 0 auto;
+}
+
+.sticky-header-container nav {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     padding: 0.66rem 0 0.66rem 0.5rem;
-
 }
 
 .sticky-header-container img {
@@ -29,6 +37,8 @@ html {
     margin-left: 1rem;
 }
 
+/* HEADER IMAGE SECTION */
+
 header {
     background-image: url(./images/moto.jpg);
     height: 25rem;
@@ -38,7 +48,6 @@ header {
 }
 
 .hero-image-container {
-    width: 960px;
     margin: 0 auto;
     padding-top: 9rem;
     
@@ -63,6 +72,9 @@ header {
     font-size: 2rem;
 }
 
+
+/* MAIN NAVIGATION SECTION */
+
 .menu-flex-container {
     background-color: firebrick;
     display: flex;
@@ -76,21 +88,27 @@ header {
     align-items: center;
     justify-content: space-between;
     flex-flow: wrap row;
-    width: 960px;
-    margin: 0.75rem 0;
+    height: 2.5rem;
+    overflow: hidden;
+}
+
+.menu-flex-container li:nth-of-type(1) {
+    display: none;
 }
 
 .main-content-container {
-    width: 960px;
     margin: 0 auto;
+    
     
 }
 
 .upper-main-content-container {
     display: flex;
+    flex-wrap:wrap;
     align-items: center;
     justify-content: space-between;
     padding: 3rem 0;
+    height: 12.5rem;
 }
 
 .upper-main-content-flexbox {
@@ -101,24 +119,17 @@ header {
     
 }
 
-.upper-main-content-flexbox img {
-    width: 9rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+#pen, #watch {
+    height: 9rem;
+    margin: 2rem 0;
     display: flex;
     align-self: center;    
 }
 
-.upper-main-content-flexbox:nth-of-type(3) {
-    align-self: stretch;
-    display: flex;
-    flex-flow: column;
-    justify-content: space-between;
-}
-
 #glasses {
-    align-self: center;
-    
+    width: 9rem;
+    margin: 4.4rem 3.5rem;
+    align-self: stretch;
 }
 
 .upper-main-content-flexbox h3 {
@@ -163,24 +174,56 @@ footer {
     margin: 0 auto;
 }
 
+/* TABLET SIZE RULES */
+
 @media only screen and (min-width: 470px) and (max-width: 1024px), (orientation: portrait) {
     
-    body {
-        background-color: red;
+    
+    .menu-flex-container ul {
+        
+        flex-flow: column;
+        position: relative;
+        
     }
     
-    .upper-main-content-container {
-        flex-wrap: wrap;
+    .menu-flex-container li {
+        margin: 0.75rem;
+    }
+    
+    .menu-flex-container li:nth-of-type(1) {
+        display: block;
     }
     
     .upper-main-content-flexbox {
-        width: 47%;
-        overflow: hidden;
-        
+        width: 47%;   
+    }
+    
+    .upper-main-content-flexbox:nth-of-type(3) {
+        display: none;
     }
     
     .information-main-content-flexbox {
         width: 45%;
+
+    }
+    
+}
+
+/* PHONE SIZE RULES */
+
+@media only screen and (width: 470px), (orientation: portrait) {
+    
+        .upper-main-content-flexbox {
+        width: 90%;   
+    }
+    
+    .upper-main-content-flexbox:nth-of-type(2) {
+        display: none;
+    }
+    
+    .information-main-content-flexbox {
+        width: 90%;
+
     }
     
 }
