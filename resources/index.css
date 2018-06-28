@@ -1,14 +1,10 @@
+/* UNIVERSAL STYLING SECTION */
+
 html {
     font-size: 18px;
     margin: 0 auto;
     font-family: Helvetica;
     color: white;
-}
-
-.sticky-header-container {
-    width: 100%; 
-    background-color: black;
-    font-size: 1rem;
 }
 
 .sticky-header-container nav,
@@ -20,6 +16,14 @@ html {
 {
     width: 960px;
     margin: 0 auto;
+}
+
+/* TOP PAGE HEADER SECTION */
+
+.sticky-header-container {
+    width: 100%; 
+    background-color: black;
+    font-size: 1rem;
 }
 
 .sticky-header-container nav {
@@ -72,7 +76,6 @@ header {
     font-size: 2rem;
 }
 
-
 /* MAIN NAVIGATION SECTION */
 
 .menu-flex-container {
@@ -96,6 +99,8 @@ header {
     display: none;
 }
 
+/* UPPER CONTENT SECTION */
+
 .main-content-container {
     margin: 0 auto;
     
@@ -108,7 +113,6 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 3rem 0;
-    height: 12.5rem;
 }
 
 .upper-main-content-flexbox {
@@ -138,6 +142,8 @@ header {
     padding: 0.5rem 0;
 }
 
+/* LOWER CONTENT SECTION */
+
 .lower-main-content-container {
     display: flex;
     flex-flow: wrap row;
@@ -160,6 +166,8 @@ header {
     padding-top: 0.5rem;
 }
 
+/* FOOTER SECTION */
+
 footer {
     background-color: black;
     height: 5rem;
@@ -176,11 +184,20 @@ footer {
 
 /* TABLET SIZE RULES */
 
-@media only screen and (min-width: 470px) and (max-width: 1024px), (orientation: portrait) {
+@media only screen and (min-width: 470px) and (max-width: 1024px) {
     
+    
+    .sticky-header-container nav,
+    .main-content-container,
+    .menu-flex-container ul,
+    .upper-main-content-container,
+    .hero-image-container
+
+{
+    width: auto;
+}
     
     .menu-flex-container ul {
-        
         flex-flow: column;
         position: relative;
         
@@ -194,6 +211,10 @@ footer {
         display: block;
     }
     
+    .upper-main-content-container {
+        margin: 0 auto;
+    }
+    
     .upper-main-content-flexbox {
         width: 47%;   
     }
@@ -203,7 +224,7 @@ footer {
     }
     
     .information-main-content-flexbox {
-        width: 45%;
+        width: 35%;
 
     }
     
@@ -211,19 +232,81 @@ footer {
 
 /* PHONE SIZE RULES */
 
-@media only screen and (width: 470px), (orientation: portrait) {
+@media only screen and (max-width: 470px) {
+    
+    
+    .sticky-header-container nav,
+    .main-content-container,
+    .menu-flex-container ul,
+    .upper-main-content-container,
+    .hero-image-container,
+    .hero-image-flexbox,
+    footer
+
+{
+    width: auto;
+    
+}
+    
+    header {
+        height: 15rem;
+    }
+    
+    .hero-image-container {
+    padding-top: 10rem;
+    
+}
+
+.hero-image-flexbox {
+    padding: 1rem 0 1rem 2rem;
+}
+
+.hero-image-flexbox p {
+    font-size: 0.77rem;
+}
+
+.hero-image-flexbox h1 {
+    font-size: 1rem;
+}
+    
+    .menu-flex-container ul {
+        flex-flow: column;
+        position: relative;
+        
+    }
+    
+    .menu-flex-container li {
+        margin: 0.75rem;
+    }
+    
+    .menu-flex-container li:nth-of-type(1) {
+        display: block;
+    }
+    
+    .upper-main-content-container {
+        margin: 0 auto;
+        justify-content: center;
+    }
     
         .upper-main-content-flexbox {
         width: 90%;   
     }
     
-    .upper-main-content-flexbox:nth-of-type(2) {
+    .upper-main-content-flexbox:nth-of-type(2), 
+    .upper-main-content-flexbox:nth-of-type(3) {
         display: none;
     }
     
+    .lower-main-content-container {
+    justify-content: center;
+    }
     .information-main-content-flexbox {
         width: 90%;
-
+        margin-bottom: 0.5rem;
+    }
+    
+    .copyright {
+        text-align: center;
     }
     
 }
